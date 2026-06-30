@@ -19,11 +19,13 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/linux-qcom-6.18:"
 # tag:qcom-6.18.y-20260615.1
 SRCREV ?= "5086fd78561b5f1a8824806decd2e9bf2cfe3d6f"
 
-SRCBRANCH ?= "nobranch=1"
-SRCBRANCH:class-devupstream ?= "branch=qcom-6.18.y"
+KERNEL_REPO ?= "github.com/zhuhangtian/kernel.git"
+KERNEL_BRANCH ?= "keenfinity"
+SRCBRANCH ?= "branch=${KERNEL_BRANCH}"
+SRCBRANCH:class-devupstream ?= "branch=${KERNEL_BRANCH}"
 
 SRC_URI = " \
-    git://github.com/qualcomm-linux/kernel.git;${SRCBRANCH};protocol=https \
+    git://${KERNEL_REPO};${SRCBRANCH};protocol=https \
     file://0001-tools-use-basename-to-identify-file-in-gen-mach-type.patch \
 "
 
