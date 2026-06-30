@@ -13,7 +13,8 @@ repos:
   meta-qcom:
 
   oe-core:
-    url: https://github.com/openembedded/openembedded-core
+    url: https://github.com/zhuhangtian/openembedded-core
+    branch: keenfinity
     layers:
       meta:
 

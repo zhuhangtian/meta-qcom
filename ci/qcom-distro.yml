@@ -11,10 +11,12 @@ defaults:
 
 repos:
   meta-qcom-distro:
-    url: https://github.com/qualcomm-linux/meta-qcom-distro
+    url: https://github.com/zhuhangtian/meta-qcom-distro
+    branch: keenfinity
 
   meta-openembedded:
-    url: https://github.com/openembedded/meta-openembedded
+    url: https://github.com/zhuhangtian/meta-openembedded
+    branch: keenfinity
     patches:
       plain:
         repo: meta-qcom
